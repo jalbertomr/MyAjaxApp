@@ -1,0 +1,42 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+    <h:head>
+        <meta http-equiv="Content-type" content="text/html; charset=UTF-8"/>
+        <title>Auto-Acompletamiento usando AJAX</title>
+        <script type="text/javascript" src="javascript.js"></script>
+    </h:head>
+    <h:body onload="init()">
+        <h1>Auto-Acompletamiento usando AJAX</h1>
+        <p>Este ejemplo muestra como se puede hace en tiempo real auto-acompletamiento usando Asynchronous JavaScript and XML (Ajax).</p>
+
+        <p>En la forma de abajo introduce un nombre. Posibles nombres que acompleten seran mostrados debajo de la forma. Por ejemplo,
+            intenta teclear "Bach," "Mozart," o "Stravinsky," entonces has click en uno de las selecciones para ver detalles del compositor.</p>
+        <form name="autofillform" action="autocomplete">
+            <table border="0" cellpadding="5">
+                <thead>
+                    <tr>
+                        <th></th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Nombre del Compositor:</strong></td>
+                        <td><input type="text" size="40" id="complete-field" onkeyup="doCompletion();"/></td>
+                    </tr>
+                    <tr>
+                        <td id="auto-row" colspan="2">
+                            <table id="complete-table" />
+                        </td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+
+        </form>
+
+    </h:body>
+</html>
+
